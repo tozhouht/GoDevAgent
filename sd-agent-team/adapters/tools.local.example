@@ -1,0 +1,14 @@
+# 自定义工具注册表 — 复制本文件为 tools.local 后按行登记（去掉行首 #）
+# 用途：ZCode / DeepSeek Harness 等未内置探测的工具，告诉安装器把它们装到哪
+# 格式（竖线分隔，每行一个工具）：工具名|类型|目标路径
+#   类型 skills = 该目录下放 9 个技能目录（有 skills 目录约定的工具）
+#   类型 agents = 把 AGENTS.md 适配块追加到该文件（读 AGENTS.md/GEMINI.md 约定的工具）
+#   类型 prompt = 把 COMBINED-PROMPT.md 复制到该目录（吃 system prompt 的 Harness/API）
+# 路径写法（bash）：C:\... 请写成 C:/... 或 /c/...（正斜杠），含空格的路径直接写，脚本已加引号
+# 装完用 bash adapters/install.sh 重跑即可；--only 过滤工具名同样对本注册表生效
+#
+# 示例（按你机器实际路径修改后取消注释）：
+# zcode|skills|C:/Users/Administrator/.zcode/skills
+# zcode|agents|C:/Users/Administrator/.zcode/AGENTS.md
+# deepseek-harness|prompt|C:/Users/Administrator/deepseek-harness/prompts
+# antigravity|agents|C:/Users/Administrator/.antigravity/AGENTS.md

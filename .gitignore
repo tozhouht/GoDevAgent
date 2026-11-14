@@ -1,0 +1,17 @@
+# WorkBuddy 项目数据（记忆/会话），不纳入仓库
+.workbuddy/
+
+# 通知配置含 webhook 密钥，禁止提交
+docs/notify.yaml
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# 运行时产物
+node_modules/
+__pycache__/
+*.log
