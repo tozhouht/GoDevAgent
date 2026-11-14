@@ -44,7 +44,17 @@ Only ★ is a human step.
 
 ## Installation
 
-**Auto-detect and install** (recommended; on Windows use Git Bash):
+**npx (one command, cross-platform)**:
+
+```bash
+npx godevagent              # detect agent tools and install
+npx godevagent --dry-run    # preview only
+npx godevagent list         # show detection and install status
+```
+
+Before the npm release, install straight from the repo: `npx github:tozhouht/GoDevAgent --dry-run`
+
+**Auto-detect via repo script** (on Windows use Git Bash):
 
 ```bash
 cd sd-agent-team
@@ -102,6 +112,10 @@ Core principle: **mandatory workflows, not suggestions.**
 README.md                Chinese overview (default)
 README_en.md             this file (English)
 README.txt               Chinese plain-text version
+LICENSE                  MIT
+package.json             npm package config (`npx godevagent`)
+bin/cli.mjs              CLI installer (Node, cross-platform, no bash required)
+PUBLISHING.md            npm release guide
 sd-agent-team/
   README.md              detailed documentation
   00-orchestrator … 08-notifier/    role definitions (SKILL.md each)

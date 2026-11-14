@@ -15,3 +15,5 @@ Thumbs.db
 node_modules/
 __pycache__/
 *.log
+*.tgz
+.tmp-verify/

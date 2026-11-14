@@ -44,7 +44,17 @@
 
 ## 安装
 
-**自动探测安装**（推荐，Windows 用 Git Bash）：
+**npx（一条命令，跨平台）**：
+
+```bash
+npx godevagent              # 探测本机 Agent 工具并安装
+npx godevagent --dry-run    # 只预览
+npx godevagent list         # 查看探测结果与安装状态
+```
+
+未发布 npm 前可直连仓库：`npx github:tozhouht/GoDevAgent --dry-run`
+
+**自动探测安装**（仓库内脚本，Windows 用 Git Bash）：
 
 ```bash
 cd sd-agent-team
@@ -103,6 +113,9 @@ README.md                中文说明（默认）
 README_en.md             英文说明
 README.txt               纯文本版中文说明
 LICENSE                  MIT
+package.json             npm 包配置（npx godevagent）
+bin/cli.mjs              CLI 安装器（Node 实现，跨平台，无需 bash）
+PUBLISHING.md            发布到 npm 的流程说明
 sd-agent-team/
   README.md              完整详细文档
   00-orchestrator … 08-notifier/    各角色定义（各自 SKILL.md）

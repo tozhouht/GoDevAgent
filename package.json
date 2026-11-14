@@ -1,0 +1,46 @@
+{
+  "name": "godevagent",
+  "version": "0.1.0",
+  "description": "Full-lifecycle software development team of AI agents. Nine Markdown skills covering requirements to release, installable into Claude Code, Codex, OpenCode, WorkBuddy, Gemini CLI and more.",
+  "type": "module",
+  "bin": {
+    "godevagent": "bin/cli.mjs"
+  },
+  "files": [
+    "bin/",
+    "sd-agent-team/",
+    "README.md",
+    "README_en.md",
+    "README.txt",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node bin/cli.mjs --dry-run",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "ai-agents",
+    "agent-skills",
+    "claude-code",
+    "codex",
+    "opencode",
+    "sdd",
+    "tdd",
+    "workflow",
+    "code-generation",
+    "developer-tools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tozhouht/GoDevAgent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tozhouht/GoDevAgent/issues"
+  },
+  "homepage": "https://github.com/tozhouht/GoDevAgent#readme",
+  "license": "MIT",
+  "author": "tozhouht <tozhouht@qq.com>"
+}
