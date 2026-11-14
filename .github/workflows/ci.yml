@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Shell script syntax
+        run: for f in $(find . -name '*.sh' -not -path './node_modules/*'); do echo "check $f"; bash -n "$f"; done
+
+      - name: CLI syntax
+        run: node --check bin/cli.mjs
+
+      - name: Skill pack validation
+        run: node scripts/validate-skills.mjs
+
+      - name: Installer dry-run
+        run: node bin/cli.mjs --dry-run
+
+      - name: Package contents
+        run: npm pack --dry-run

@@ -1,5 +1,9 @@
 # GoDevAgent
 
+[![ci](https://github.com/tozhouht/GoDevAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/tozhouht/GoDevAgent/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/godevagent.svg)](https://www.npmjs.com/package/godevagent)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **全流程研发 Agent 团队 —— 需求 → 原型 → 架构 → 详细设计 → 编码 → 测试 → 发布**
 
 九个可组合的 Markdown Skill，把任何编码 Agent 变成一支能自己跑完整个交付流程的团队：一条需求进去，一路自动跑到终点，**只在你终验时停一次**；你打回，它自己进修复循环。

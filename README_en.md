@@ -1,5 +1,9 @@
 # GoDevAgent
 
+[![ci](https://github.com/tozhouht/GoDevAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/tozhouht/GoDevAgent/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/godevagent.svg)](https://www.npmjs.com/package/godevagent)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **A full-lifecycle software development team of AI agents — requirements → prototype → architecture → design → code → test → release.**
 
 Nine composable Markdown skills that turn any coding agent into a self-driving delivery team: it runs the entire pipeline start to finish, stops exactly once for your final acceptance, and fixes itself in a loop if you reject it.
