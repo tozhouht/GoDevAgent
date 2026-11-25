@@ -4,6 +4,9 @@
 # 通知配置含 webhook 密钥，禁止提交
 docs/notify.yaml
 
+# npm 凭据，禁止提交
+.npmrc
+
 # 系统与编辑器
 .DS_Store
 Thumbs.db
