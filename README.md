@@ -48,17 +48,47 @@
 
 ## 安装
 
-**npx（一条命令，跨平台）**：
+### 方式一：npx 直接运行（推荐，无需安装）
+
+> 要求 Node.js ≥ 18。不落盘、随用随跑：
 
 ```bash
 npx godevagent              # 探测本机 Agent 工具并安装
-npx godevagent --dry-run    # 只预览
+npx godevagent --dry-run    # 只预览，不做任何改动
 npx godevagent list         # 查看探测结果与安装状态
 ```
 
-未发布 npm 前可直连仓库：`npx github:tozhouht/GoDevAgent --dry-run`
+### 方式二：npm 安装
 
-**自动探测安装**（仓库内脚本，Windows 用 Git Bash）：
+```bash
+npm install -g godevagent   # 全局安装
+godevagent                  # 之后直接运行（无需 npx 前缀）
+godevagent --dry-run
+godevagent list
+```
+
+或安装为某个项目的开发依赖：
+
+```bash
+npm install -D godevagent
+npx godevagent --dry-run
+```
+
+升级版本：`npm update -g godevagent`。
+
+### 方式三：从 GitHub 仓库直装（不经过 npm）
+
+```bash
+npx github:tozhouht/GoDevAgent --dry-run
+```
+
+### 安装器会做什么
+
+自动探测本机已装的 Agent 工具（Claude Code、WorkBuddy、Codex、OpenCode、Gemini CLI、Cursor），按各自约定把九个角色的 Skill 装进去；技能包会落盘到稳定目录 `~/.godevagent/skills`，各工具的引用路径长期有效。**只新增文件、幂等跳过已装内容，不会覆盖或删除你已有的任何配置**。
+
+### 其他安装途径
+
+**仓库内脚本**（Windows 用 Git Bash）：
 
 ```bash
 cd sd-agent-team

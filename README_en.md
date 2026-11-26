@@ -48,17 +48,47 @@ Only ★ is a human step.
 
 ## Installation
 
-**npx (one command, cross-platform)**:
+### Option 1: run with npx (recommended, nothing to install)
+
+> Requires Node.js ≥ 18. Runs on demand without a permanent install:
 
 ```bash
 npx godevagent              # detect agent tools and install
-npx godevagent --dry-run    # preview only
+npx godevagent --dry-run    # preview only, no changes
 npx godevagent list         # show detection and install status
 ```
 
-Before the npm release, install straight from the repo: `npx github:tozhouht/GoDevAgent --dry-run`
+### Option 2: install via npm
 
-**Auto-detect via repo script** (on Windows use Git Bash):
+```bash
+npm install -g godevagent   # global install
+godevagent                  # then run directly (no npx prefix)
+godevagent --dry-run
+godevagent list
+```
+
+Or add it as a dev dependency of a project:
+
+```bash
+npm install -D godevagent
+npx godevagent --dry-run
+```
+
+Upgrade later with `npm update -g godevagent`.
+
+### Option 3: straight from the GitHub repo (bypasses npm)
+
+```bash
+npx github:tozhouht/GoDevAgent --dry-run
+```
+
+### What the installer does
+
+It detects the agent tools already on your machine (Claude Code, WorkBuddy, Codex, OpenCode, Gemini CLI, Cursor) and installs the nine role skills following each tool's own conventions; the skill pack is also copied to a stable location at `~/.godevagent/skills` so tool references stay valid. **It only adds files and skips anything already installed — it never overwrites or removes your existing configuration.**
+
+### Alternative routes
+
+**Repo script** (on Windows use Git Bash):
 
 ```bash
 cd sd-agent-team
